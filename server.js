@@ -1,6 +1,7 @@
 var express = require('express');
 var hbs = require('hbs');
 var fs = require('fs');
+var port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -63,6 +64,6 @@ res.send({
 
 
 
-app.listen(3000, () => {
-  console.log('The server is listening @ localhost:3000');
+app.listen(port, () => {
+  console.log(`The server is listening on port:${port}`);
 });
