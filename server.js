@@ -55,6 +55,13 @@ app.get('/about',(req,res) => {
   });
 });
 
+app.get('/project',(req,res) => {
+  res.render('projects.hbs',{
+    pageTitle:'Projects',
+    portfolio: 'This will be our portfolio'
+  })
+});
+
 app.get('/bad',(req,res) => {
 //  res.send('<h1>hello express</h1>');
 res.send({
@@ -62,8 +69,7 @@ res.send({
   });
 });
 
-
-
+//starting the Server 
 app.listen(port, () => {
   console.log(`The server is listening on port:${port}`);
 });
